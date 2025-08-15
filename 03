@@ -19,3 +19,39 @@ int main() {
 
     return 0;
 }
+
+
+#include <stdio.h>
+
+int main() {
+    short anos;
+    int valorDep;
+    long numConta;
+
+    // Leitura da idade sem permitir números negativos
+    do {
+        printf("Informe sua idade (short, >= 0): ");
+        if (scanf("%hd", &anos) != 1) {
+            printf("Entrada inválida! Digite um número.\n");
+            return 1; // Encerra o programa se não for número
+        }
+        if (anos < 0) {
+            printf("Idade não pode ser negativa!\n");
+        }
+    } while (anos < 0);
+
+    // Leitura do valor do depósito
+    printf("Quanto você quer depositar: ");
+    scanf("%d", &valorDep);
+
+    // Leitura do número da conta
+    printf("Informe o número da conta: ");
+    scanf("%ld", &numConta);
+
+    // Exibe os dados
+    printf("\nIdade: %hd\n", anos);
+    printf("Depósito: %d\n", valorDep);
+    printf("Conta: %ld\n", numConta);
+
+    return 0;
+}
