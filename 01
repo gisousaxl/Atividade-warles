@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int numero, divisao_1, divisao_2, divisao_3, divisao_4, divisao_5;
+
+    printf("Digite um numero de 5 digitos: ");
+    scanf("%d", &numero);
+
+    divisao_1 = numero / 10000;
+    divisao_2 = (numero / 1000) % 10;
+    divisao_3 = (numero / 100) % 10;
+    divisao_4 = (numero / 10) % 10;
+    divisao_5 = numero % 10;
+
+    printf("%d   %d   %d   %d   %d\n", divisao_1, divisao_2, divisao_3, divisao_4, divisao_5);
+
+    return 0;
+}
